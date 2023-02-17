@@ -1,0 +1,38 @@
+.form-container{
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid rgb(197, 195, 195);
+    box-sizing: borde-box;
+    display: flex;
+    justify-content: center;
+}
+.input-group{
+    margin-bottom: 20px;
+}
+.input-group label{
+    display: block;
+    margin: 0px 0px 5px 5px;
+}
+.input-group input{
+    width: 415px;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 195, 195);
+    box-sizing: border-box;
+    font-size: 24px;
+}
+.form-submit{
+    height: 55px;
+    width: 415px;
+    background-color: rgba(255, 153, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.form-link{
+    color: #FF9900;
+    text-decoration: none;
+}
