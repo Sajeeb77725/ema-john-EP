@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./SignUp.css";
+import auth from "../../firebase.init";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+
+  const [createUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
@@ -26,6 +31,8 @@ const SignUp = () => {
       setError("Password did not match.");
       return;
     }
+
+    createUserWithEmailAndPassword(email, password);
   };
 
   return (
